@@ -15,7 +15,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v1
     - name: Echo Hello World
-      run: echo "Hello World"
+      run: echo "Hello World !"
     - name: Content of Index.html
       run: |
          echo "This is line 1"
