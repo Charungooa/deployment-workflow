@@ -3,6 +3,10 @@ name: Deployment Workflow
 on: 
     workflow_dispatch:
     push:
+      paths:
+        - '**'
+        - '!github/workflows/deployment.yml'
+
 jobs:
   build-job:
     name: Hello world action
