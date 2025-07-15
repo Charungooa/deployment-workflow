@@ -1,6 +1,8 @@
 # Actions workflow 
 name: Deployment Workflow
-on: push
+on: 
+    workflow_dispatch:
+    push:
 jobs:
   build-job:
     name: Hello world action
