@@ -2,10 +2,17 @@
 name: Deployment Workflow
 on: 
     workflow_dispatch:
-    push:
+    # push:
+    # #   branches:
+    # #     - main
+    # #     - '!dev'  
+    #   paths:
+    #     - '**'
+    #     - '!.github/workflows/deployment.yml'
+    pull_request:
       branches:
         - main
-        - '!dev'  
+        - '!dev'
       paths:
         - '**'
         - '!.github/workflows/deployment.yml'
