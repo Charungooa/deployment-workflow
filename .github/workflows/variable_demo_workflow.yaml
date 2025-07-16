@@ -17,6 +17,7 @@ jobs:
           echo "Value of Greeting is: ${{ env.Greeting }}"
           echo "Value of DAY_OF_WEEK is: ${{ env.DAY_OF_WEEK }}"
           echo "Value of Repo Variable is: ${{ vars.REPO_VARIABLE1 }}"
+          echo "Value of Repo secret is: ${{ secrets.REPO_SECRET1 }}"
 
       - name: "Say Hello, its Monday"
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
