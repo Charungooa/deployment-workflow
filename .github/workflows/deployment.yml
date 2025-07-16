@@ -9,13 +9,13 @@ on:
     #   paths:
     #     - '**'
     #     - '!.github/workflows/deployment.yml'
-    pull_request:
-      branches:
-        - main
-        - '!dev'
-      paths:
-        - '**'
-        - '!.github/workflows/deployment.yml'
+    # pull_request:
+    #   branches:
+    #     - main
+    #     - '!dev'
+    #   paths:
+    #     - '**'
+    #     - '!.github/workflows/deployment.yml'
 
 jobs:
   build-job:
