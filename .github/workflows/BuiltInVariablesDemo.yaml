@@ -1,0 +1,24 @@
+name: GithubActionsDemo
+run-name: ${{github.actor}} is testing out Github Actions
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+   Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "The Job was automatically triggerd by a ${{ github.event_name }} event."
+    - run: echo "The Job is running on a ${{ runner.os}} server hosted by Github"
+    - run: echo "The name of your branch is ${{github.ref}} and your repository is ${{github.repository}}"
+
+    - name: Check out repository Code
+      uses: actions/checkout@v4
+    
+    - run: echo "The ${{github.repository}} repository has been checked out successfully.cloned to the runner"
+
+    - name: List files in the repository
+      run: |
+        ls ${{github.workspace}}
+    - run: echo "This job's status is ${{job.status}}."
