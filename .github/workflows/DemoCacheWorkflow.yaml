@@ -13,8 +13,7 @@ jobs:
      
      - name: Create a Demo file
        run: echo $(date) > Demofile.txt
-     - name: Print The Demo File
-       run: cat Demofile.txt
+
      - name: Cache Demofile.txt
        uses: actions/cache@v3
        id: demo-cache-id
@@ -23,6 +22,9 @@ jobs:
        with:
          path: Demofile.txt
          key: ${{ hashFiles('cache-dependency.txt') }}
+
+     - name: Print The Demo File
+       run: cat Demofile.txt
      - name: Cache Found
             if ${{steps.demo-cache-id.outputs.cache-hit == 'true'}}
        run: echo "Cache Found"
