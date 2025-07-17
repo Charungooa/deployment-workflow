@@ -12,7 +12,8 @@ jobs:
      
      - name: Create a Demo file
        run: echo $(Date) > Demofile.txt
-
+     - name: Print The Demo File
+       run: cat Demofile.txt
      - name: Cache Demofile.txt
        uses: actions/cache@v3
        id: demo-cache-id
